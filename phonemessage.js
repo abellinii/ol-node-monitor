@@ -11,13 +11,18 @@ const client = new twilio(accountSid, authToken);
 
 module.exports.send =  function(msg){
 
+	console.log('trying')
+	console.log(process.env.TWILIO_ACCOUNT_SID)
+	
 		client.messages
   			.create({
     				body: msg,
     				to: process.env.TWILIO_NUMBER_TO_SEND, // Text this number
    				from: process.env.TWILIO_NUMBER, // From a valid Twilio number
   				})
-  			.then((messageres) => console.log(msg + '\n\nreciept: ' +  messageres.sid));
-}
+  			.then((message,err) => console.log(msg + '\n\nreciept: ' +  message.sid));  
+
+			}
+
 
 
