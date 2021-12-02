@@ -11,8 +11,6 @@ const client = new twilio(accountSid, authToken);
 
 module.exports.send =  function(msg){
 
-	console.log('trying')
-	console.log(process.env.TWILIO_ACCOUNT_SID)
 	
 		client.messages
   			.create({
