@@ -1,0 +1,16 @@
+{
+  "name": "ol-node-monitor",
+  "version": "1.0.0",
+  "description": "simple node monitor to check that a ol node is running correctly",
+  "main": "monitor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "the-passive-trust",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "eventsource": "^1.1.0",
+    "twilio": "^3.71.3"
+  }
+}
